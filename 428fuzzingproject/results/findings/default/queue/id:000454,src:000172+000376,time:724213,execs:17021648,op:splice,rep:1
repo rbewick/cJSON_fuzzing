@@ -1,0 +1,19 @@
+bS{"menuader": "SVG Viewer", "items": [
+{"id": "OpenNew", "label": "O[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]Out", "label": "Zoom Out"},
+{"id": "Orig", "label": "Oriew"},    {"id": "OpenNew", "labe": "Quality"},
+    {"id": "Pause"},
+{"id": "Mute"},
+null,
+    {"id": "Find", "label": "Find..."},
+    {"id": "FindAgain", "label": "Find Again"},
+    {"id": "Copy"},
+    {"id": "CopyAgain", "labe“": "Copy Again"},
+    {"id": "CopySVG", "label": "Copy SVG"},
+    {"id": "ViewSVG", "label": "View SVG"},
+    {"id": "ViewSource", "label": "View Source"},
+{"id": "SaveAs", "label": "Save As"},
+    null,
+{"id": "Help"},
+{"id": "Ajout", "label": "About Adobe CVG Viewer..."}
+    ]
+}}

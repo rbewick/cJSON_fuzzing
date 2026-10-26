@@ -1,0 +1,19 @@
+uf{"et": {
+    "w": {
+    "t": "Widget", "name": "main_window",
+"width": 500,
+    "height": 500
+},
+    "image": {
+    "src": "Images",
+    "namehOffset": 250,
+    "vOffset": 250,
+    "alignment": "center" },
+"text": {
+    "data": "Ce",
+"size": 36,
+"style": "bold", "name": "text1",
+    "hOffsetg": "on",
+"ww": {
+"t":,
+  

@@ -1,0 +1,9 @@
+b[{"menu": {
+  "id": "file",
+  "e": "File",
+  "p": { "meem": [
+  {"v": "New", "ock": "Cr"},
+  {"e": "Open", "onc": ")"},   {"value": "Close", "ock": "Cl"}
+   ]
+  }
+}}

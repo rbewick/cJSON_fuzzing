@@ -1,0 +1,6 @@
+# environment variables:
+AFL_CUSTOM_INFO_PROGRAM=/home/reese/CPT_S428/cJSON_fuzzing/fuzzing/afl-build/fuzzing/afl-main
+AFL_CUSTOM_INFO_PROGRAM_ARGV=@@ yes
+AFL_CUSTOM_INFO_OUT=/home/reese/CPT_S428/cJSON_fuzzing/fuzzing/afl-build/fuzzing/findings/default
+# command line:
+'/usr/bin/afl-fuzz' '-i' '/home/reese/CPT_S428/cJSON_fuzzing/fuzzing/inputs' '-o' '/home/reese/CPT_S428/cJSON_fuzzing/fuzzing/afl-build/fuzzing/findings' '-x' '/home/reese/CPT_S428/cJSON_fuzzing/fuzzing/json.dict' '--' '/home/reese/CPT_S428/cJSON_fuzzing/fuzzing/afl-build/fuzzing/afl-main' '@@' 'yes'
