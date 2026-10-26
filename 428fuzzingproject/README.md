@@ -5,14 +5,14 @@ CPT_S 428 project by Jose Hernandez, Reese Bewick, and Valeria Barrios.
 We fuzz the cJSON parser (https://github.com/DaveGamble/cJSON) to look for
 memory-safety bugs. The fuzzing harness (`fuzzing/afl.c`) and build scripts
 (`fuzzing/afl.sh`, `fuzzing/afl-prepare-linux.sh`) come from the cJSON project.
-Our team's additions are [list: custom seeds folder, scripts, results].
+Our team's additions are a custom seeds folder and specific results folders for future tests.
 
 ## Requirements
 
-- Ubuntu [version] (we used WSL on Windows; macOS is not supported)
+- Ubuntu 24.04.5
 - AFL++ 4.09c
-- CMake [version]
-- clang [version]
+- CMake 3.28.3
+- clang 18.1.3
 
 Install on Ubuntu:
 
@@ -23,7 +23,7 @@ sudo apt install afl++ cmake clang
 ## Setup
 
 ```bash
-git clone https://github.com/[your-username]/cJSON.git
+git clone https://github.com/rbewick/cJSON.git
 cd cJSON/fuzzing
 ./afl-prepare-linux.sh   # one-time system setting so AFL can detect crashes (needs sudo)
 ```
@@ -50,11 +50,11 @@ afl-fuzz -i fuzzing/inputs \
          -- fuzzing/afl-build/fuzzing/afl-main @@ yes
 ```
 
-### 3. Custom seed run (our seeds)
+### 3. Custom seed run (Yet to be implemented)
 
 ```bash
-afl-fuzz -i team-fuzzing/seeds \
-         -o team-fuzzing/results/custom \
+afl-fuzz -i 428fuzzingproject/seeds \
+         -o 428fuzzingproject/results/custom \
          -x fuzzing/json.dict \
          -V 2400 \
          -- fuzzing/afl-build/fuzzing/afl-main @@ yes
@@ -97,7 +97,7 @@ bu{"name": "test", "values": [1, 2, 3]}
 
 ## Results
 
-Each run saves its output to `team-fuzzing/results/<run-name>/default/`:
+Each run saves its output to `428fuzzingproject/results/<run-name>/default/`:
 
 - `fuzzer_stats`: summary numbers (executions, speed, coverage, crashes)
 - `queue/`: inputs that reached new code
@@ -106,7 +106,7 @@ Each run saves its output to `team-fuzzing/results/<run-name>/default/`:
 To reproduce a crash:
 
 ```bash
-fuzzing/afl-build/fuzzing/afl-main team-fuzzing/results/<run-name>/default/crashes/<file> yes
+fuzzing/afl-build/fuzzing/afl-main 428fuzzingproject/results/<run-name>/default/crashes/<file> yes
 ```
 
 ## Credentials
